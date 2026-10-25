@@ -6,6 +6,51 @@
 <script src="generation.js"></script>
 
 <h1>Tube Race</h1>
+
+<label for="mode">Choose Game Length:</label>
+<select name="mode" id = "mode">
+    <option value = "Short"> Short Game (&lt2 hours) </option>
+    <option value = "Medium" selected = selected> Medium Game (2-3 hours)</option>
+    <option value = "Long"> Long Game (&gt3 hours)</option>
+    <option value = "Madness"> Madness (All Day?)</option>
+</select>
+<br> <br>
+<label for="DLR">DLR:</label>
+<select name="DLR" id = "DLR">
+    <option value = "IncludeDLR"> Include DLR Stations </option>
+    <option value = "ReducedDLR" selected = selected> Reduced DLR Stations</option>
+    <option value = "NoDLR"> No DLR Stations </option>
+</select>
+<label for="DG">Overground:</label>
+<select name="OG" id = "OG">
+    <option value = "IncludeOG"> Include Overground Stations </option>
+    <option value = "ReducedOG"> Reduced Overground Stations</option>
+    <option value = "NoOG" selected = selected> No Overground Stations </option>
+</select>
+  <input type="checkbox" id="EL" name="EL" value="EL" checked>
+  <label for="EL"> Include Elizabeth Line?</label><br>
+<br>
+<label for="Start">Start Line</label>
+<select name="Start" id = "Start">
+    <option value = "Bank"> Bank </option>
+    <option value = "Euston"> Euston </option>
+    <option value = "King's Cross St. Pancras"> King's Cross St. Pancras </option>
+    <option value = "Liverpool Street" selected = "selected"> Liverpool Street </option>
+    <option value = "Paddington"> Paddington </option>
+    <option value = "Victoria"> Victoria </option>
+    <option value = "Waterloo"> Waterloo </option>
+</select>
+<label for="End">Finish Line</label>
+<select name="End" id = "End">
+    <option value = "Bank"> Bank </option>
+    <option value = "Euston"> Euston </option>
+    <option value = "King's Cross St. Pancras" selected = "selected"> King's Cross St. Pancras </option>
+    <option value = "Liverpool Street"> Liverpool Street </option>
+    <option value = "Paddington"> Paddington </option>
+    <option value = "Victoria"> Victoria </option>
+    <option value = "Waterloo"> Waterloo </option>
+</select>
+<br> <br>
 <button onclick="generate()">Generate Stations</button>
 
 <p id = "station1"></p>
