@@ -1,3 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 17px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'menu'
+    'main'
+    'facts'
+    'footer';
+  background-color: white;
+  gap: 10px;  
+}
+
+.header {
+  grid-area: header;
+  background-color: purple;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header > h1 {
+  font-size: 40px;
+}
+
+.menu {
+  grid-area: menu;
+  }
+  
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+  
+.content {
+  grid-area: main;
+}
+
+.content > h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.content > p {
+  margin-bottom: 7px;
+}
+
+.facts {
+  grid-area: facts;
+  border: 1px solid #0099cc;
+  background-color: beige;
+  padding: 10px;
+}
+
+.facts > h2 {
+  font-size: 20px;
+}
+
+.facts li {
+  margin-bottom: 5px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+}
+
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
