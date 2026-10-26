@@ -1,13 +1,41 @@
 <html>
 <head>
 <title>Tube Race</title>
+  <link rel="icon" type="image/x-icon" href="TubeRace.png">
 </head>
 <body>
 <script src="generation.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
 <h1>Tube Race</h1>
 
-<label for="mode">Choose Game Length:</label>
+<button id = "Rules" class = "rules"> Rules </button>
+<div id = "RulesTab" class = "modal">
+    <div class="modal-header">
+        <span class = "close"> &times </span>
+        <h2> The Rules </h2>
+    </div>
+    <div class = "modal-content">
+        <p> From the selected starting station and ending at or near the selected finishing station, each participant must visit 5 randomly selected train stations in the shortest time possible. Each participant will be visiting the same stations. The order is up to them.</p>
+        <ul>
+            <li> A participant must not use their (or any other) phone for directions or transport information. They must only use their wits, knowledge, and a paper tube map.</li>
+            <li> Transportation is limited to rail of any type and foot passage. Participants may not use a bicycle (push, e-, or motorised), taxi, bus, e-scooter, or cable car, nor any other type of automobile. (You may choose to run the entire thing if you want to).</li>
+            <li> Visiting a required station is achieved by tapping out of the station, leaving the station building, and taking a selfie of yourself with a sign stating the name of the station.</li>
+            <li> The winner is the first person to reach the designated finish line with selfies of themself outside all 5 generated stations.</li>
+        </ul>
+    </div>
+</div>
+<label for="mode" class = "tooltip">Choose Game Length:
+  <span class="tooltiptext">
+      <ul>
+          <li> Short Game: Generates 3 zone 1 stations and 2 zone 2 stations</li>
+          <li> Medium Game: Generates 2 zone 1 stations, 1 from zone 1 or 2, 1 from zone 2 and 1 from zone 3</li>
+          <li> Long Game: Generates 1 station from each zone 1-5</li>
+          <li> Madness: Generates 5 stations completely randomly</li>
+      </ul>
+  </span>
+</label>
 <select name="mode" id = "mode">
     <option value = "Short"> Short Game (&lt2 hours) </option>
     <option value = "Medium" selected = selected> Medium Game (2-3 hours)</option>
@@ -15,13 +43,29 @@
     <option value = "Madness"> Madness (All Day?)</option>
 </select>
 <br> <br>
-<label for="DLR">DLR:</label>
+<label for="DLR" class = "tooltip">DLR:
+  <span class="tooltiptext">
+      <ul>
+          <li> Include DLR Stations: Adds stations on DLR to set of possible stations</li>
+          <li> Reduced DLR Stations: Adds stations on DLR to set of possible stations, but halves their chance of appearing</li>
+          <li> No DLR Stations: No stations on just DLR will be generated</li>
+      </ul>
+  </span>
+</label>
 <select name="DLR" id = "DLR">
     <option value = "IncludeDLR"> Include DLR Stations </option>
     <option value = "ReducedDLR" selected = selected> Reduced DLR Stations</option>
     <option value = "NoDLR"> No DLR Stations </option>
 </select>
-<label for="DG">Overground:</label>
+<label for="DG" class = "tooltip">Overground:
+  <span class="tooltiptext">
+      <ul>
+          <li> Include Overground Stations: Adds stations on Overground to set of possible stations</li>
+          <li> Reduced Overground Stations: Adds stations on Overground to set of possible stations, but halves their chance of appearing</li>
+          <li> No Overground Stations: No stations on just Overground will be generated</li>
+      </ul>
+  </span>
+</label>
 <select name="OG" id = "OG">
     <option value = "IncludeOG"> Include Overground Stations </option>
     <option value = "ReducedOG"> Reduced Overground Stations</option>
@@ -59,5 +103,34 @@
 <p id = "station4"></p>
 <p id = "station5"></p>
 <p id = "demo"></p>
+
+<script>
+// Get the modal
+var modal = document.getElementById("RulesTab");
+
+// Get the button that opens the modal
+var btn = document.getElementById("Rules");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+} 
+</script>
+
 </body>
 </html>
