@@ -193,7 +193,7 @@ function anyZone(stationList, start, end){
 function zone1or2(stationList, start, end){
     let station = stationList[Math.floor(Math.random()*stationList.length)];
         
-    while (tubeZones[station] != (1 || 2) || station == start || station == end){
+    while (tubeZones[station] > 2 || station == start || station == end){
         station = stationList[Math.floor(Math.random()*stationList.length)];
         station = reduceDLR(station, stationList);
         station = reduceOG(station, stationList);
