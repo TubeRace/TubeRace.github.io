@@ -163,12 +163,15 @@ body {
 /* Tooltip text */
 .tooltiptext {
   visibility: hidden; /* Hidden by default */
-  width: 26em;
+  width: 20em;
+  top: 100%;
+  left: 50%;
+  margin-left: -50%;
   background-color: black;
   color: #ffffff;
   text-align: left;
-  padding: 5px 0;
-  border-radius: 6px;
+  padding: 5% 0;
+  border-radius: 6%;
   position: absolute;
   z-index: 1; /* Ensure tooltip is displayed above content */
 }
