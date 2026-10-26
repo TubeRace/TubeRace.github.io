@@ -103,13 +103,13 @@ body {
 
 /* Modal Header */
 .modal-header {
-  padding: 2px 16px;
+  padding: 2% 3%;
   background-color: #e1251b;
   color: white;
 }
 
 /* Modal Body */
-.modal-body {padding: 2px 16px;}
+.modal-body {padding: 2% 16%;}
 
 
 /* Modal Content */
@@ -118,9 +118,9 @@ body {
   background-color: #fefefe;
   margin: auto;
   padding: 2%;
-  border: 1px solid #888;
+  border: 1% solid #888;
   width: 95%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4% 8% 0 rgba(0,0,0,0.2),0 6% 20% 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.4s
 }
@@ -129,7 +129,7 @@ body {
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 200%;
   font-weight: bold;
 }
 
@@ -141,14 +141,14 @@ body {
 }
 /* Add Animation */
 @keyframes animatetop {
-  from {top: -300px; opacity: 0}
+  from {top: -300%; opacity: 0}
   to {top: 0; opacity: 1}
 }
 
 .rules{
     position: absolute; 
-    right: 10px;
-    top: 10px;
+    right: 2%;
+    top: 2%;
 }
 
 /* Tooltip container */
