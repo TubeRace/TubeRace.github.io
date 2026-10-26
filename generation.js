@@ -245,6 +245,8 @@ async function loading(stationList,ms,id, station){
     document.getElementById(id).innerHTML = station
 }
 
+
+
 const tubeZones = {"Acton Town" : 3,
 "Aldgate": 1,
 "Aldgate East" : 1,
@@ -266,7 +268,7 @@ const tubeZones = {"Acton Town" : 3,
 "Belsize Park" : 2,
 "Bermondsey" : 2,
 "Bethnal Green" : 2,
-"Blackfriars" : 2,
+"Blackfriars" : 1,
 "Blackhorse Road" : 3,
 "Bond Street" : 1,
 "Borough" : 1,
