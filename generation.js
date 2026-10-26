@@ -42,9 +42,9 @@ async function generate(){
         if (document.getElementById("mode").value == "Short"){
             station1 = zone1(stationList, start,end);
             stationList = remove(stationList, station1);
-            station2 = zone1(stationList);
+            station2 = zone1(stationList, start,end);
             stationList = remove(stationList, station2);
-            station3 = zone1(stationList);
+            station3 = zone1(stationList, start,end);
             stationList = remove(stationList, station3);
             station4 = zone2(stationList);
             stationList = remove(stationList, station4);
@@ -55,13 +55,13 @@ async function generate(){
         if (document.getElementById("mode").value == "Medium"){
             station1 = zone1(stationList, start,end);
             stationList = remove(stationList, station1);
-            station2 = zone1(stationList);
+            station2 = zone1(stationList, start,end);
             stationList = remove(stationList, station2);
-            station3 = zone1or2(stationList);
+            station3 = zone1or2(stationList, start,end);
             stationList = remove(stationList, station3);
             station4 = zone2(stationList);
             stationList = remove(stationList, station4);
-            station5 = zone3(stationList,start,end);
+            station5 = zone3(stationList);
             stationList = remove(stationList, station5);            
         };
 
@@ -74,7 +74,7 @@ async function generate(){
             stationList = remove(stationList, station3);
             station4 = zone4(stationList);
             stationList = remove(stationList, station4);
-            station5 = zone5(stationList,start,end);
+            station5 = zone5(stationList);
             stationList = remove(stationList, station5);            
         };
 
@@ -98,7 +98,7 @@ async function generate(){
             return acc;
         }, {});
         
-        if (Math.max(...Object.values(lineCount)) < 4 && (lineCount["DLR"] < 3 || Object.keys(lineCount).includes("DLR") == false)){
+        if (Math.max(...Object.values(lineCount)) < 4){
             sameLine = false;
         }
 
