@@ -105,6 +105,7 @@ body {
 .modal-header {
   padding: 2% 3%;
   background-color: #e1251b;
+  width: 100%;
   color: white;
 }
 
