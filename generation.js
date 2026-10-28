@@ -32,10 +32,6 @@ async function generate(){
     document.getElementById('station4').innerHTML = station4;
     document.getElementById('station5').innerHTML = station5;
 
-    if (start == end){
-        station1 = "Start and Finish Line must be different";
-        sameLine = false;
-    }
     
     while (sameLine) {
         
@@ -104,16 +100,12 @@ async function generate(){
 
     }
     
-    if (start != end){
-        loading(stationList, 5000, 'station1',station1);
-        loading(stationList, 10000, 'station2', station2);
-        loading(stationList, 15000, 'station3', station3);
-        loading(stationList, 20000, 'station4',station4);
-        loading(stationList, 25000, 'station5',station5);        
-    }
-    else{
-        document.getElementById('station1').innerHTML = station1;
-    }
+    loading(stationList, 5000, 'station1',station1);
+    loading(stationList, 10000, 'station2', station2);
+    loading(stationList, 15000, 'station3', station3);
+    loading(stationList, 20000, 'station4',station4);
+    loading(stationList, 25000, 'station5',station5);        
+
 
 }
 
