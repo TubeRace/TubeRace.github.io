@@ -34,6 +34,18 @@ async function generate(){
 
     
     while (sameLine) {
+        if (document.getElementById("mode").value == "V Short"){
+            station1 = zone1(stationList, start,end);
+            stationList = remove(stationList, station1);
+            station2 = zone1(stationList, start,end);
+            stationList = remove(stationList, station2);
+            station3 = zone1(stationList, start,end);
+            stationList = remove(stationList, station3);
+            station4 = zone1(stationList, start,end);
+            stationList = remove(stationList, station4);
+            station5 = zone1(stationList,start,end);
+            stationList = remove(stationList, station5);            
+        };
         
         if (document.getElementById("mode").value == "Short"){
             station1 = zone1(stationList, start,end);
@@ -108,7 +120,6 @@ async function generate(){
 
 
 }
-
 function zone1(stationList, start, end){
     let station = stationList[Math.floor(Math.random()*stationList.length)];
         
