@@ -32,6 +32,7 @@
 <label for="mode" class = "tooltip">Choose Game Length:
   <span class="tooltiptext">
       <ul>
+          <li> Very Short Game: All zone 1 stations</li>
           <li> Short Game: Generates 3 zone 1 stations and 2 zone 2 stations</li>
           <li> Medium Game: Generates 2 zone 1 stations, 1 from zone 1 or 2, 1 from zone 2 and 1 from zone 3</li>
           <li> Long Game: Generates 1 station from each zone 1-5</li>
@@ -40,7 +41,8 @@
   </span>
 </label>
 <select name="mode" id = "mode">
-    <option value = "Short"> Short Game (&lt2 hours) </option>
+    <option value = "V Short"> Very Short Game (&lt2 hours) </option>
+    <option value = "Short"> Short Game (2 hours) </option>
     <option value = "Medium" selected = selected> Medium Game (2-3 hours)</option>
     <option value = "Long"> Long Game (&gt3 hours)</option>
     <option value = "Madness"> Madness (All Day?)</option>
